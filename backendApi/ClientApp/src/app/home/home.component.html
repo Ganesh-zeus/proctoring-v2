@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">Select-User Form</div>
+  <div class="card-body">
+    <div class="container-fluid row">
+      <form [formGroup]="selectUserForm" class="col-lg-6 offset-lg-3">
+        <div class="form-group">
+          <label for="user-list">Select User:</label>
+
+          <div class="row">
+            <select class="form-control col-9" id="user-list" (change)="selectUser($event)">
+              <option *ngFor="let user of userList" [value]="user" >{{user}}</option>
+            </select>
+
+            <button  class="btn btn-primary col-2 offset-1" (click)="goToProctoringTest()">
+              Test
+            </button>
+          </div>
+        </div>
+
+        <p>Create new user by clicking <a style="cursor: pointer;color: blue;text-decoration: underline;" class="nav-link d-inline p-0" (click)="goToAddUser()">here</a>.</p>
+      </form>
+    </div>
+  </div>
+</div>

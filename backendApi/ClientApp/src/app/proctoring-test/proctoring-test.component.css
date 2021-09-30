@@ -1,0 +1,35 @@
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video {
+    background-color: #ccc;
+    margin:auto;
+    width: 100%;
+}
+
+#canvas {
+    position: absolute;
+    z-index: 2;
+}
+
+.logs {
+    background-color: #000;
+    color: #fff;
+    height: 20vh;
+    overflow-y: scroll;
+    padding:1rem;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.card-header img {
+    height: 50px;
+    width: 50px;
+}

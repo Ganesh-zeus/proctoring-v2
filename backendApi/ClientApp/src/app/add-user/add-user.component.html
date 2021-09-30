@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">Add-User Form</div>
+  <div class="card-body">
+    <div class="container-fluid row">
+      <form
+        [formGroup]="addUserForm"
+        class="col-lg-6 offset-lg-3"
+        (ngSubmit)="saveFileInfo()"
+      >
+        <div class="form-group">
+          <label for="label">Enter First Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="label"
+            placeholder="Enter Name"
+            name="label"
+            required
+          />
+        </div>
+
+        <div class="form-group align-center">
+          <label for="myFile">Upload Profile Image:</label>
+          <input
+            type="file"
+            class="form-control"
+            (change)="handleFileInput($event)"
+            name="file"
+            accept=".png,.jpg,.jpeg"
+            required
+          />
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
